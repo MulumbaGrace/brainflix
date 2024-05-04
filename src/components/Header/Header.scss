@@ -1,0 +1,208 @@
+@import "../../styles/partials/breakpoint";
+@import "../../styles/partials/colors";
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/resets";
+
+
+.header {
+    @include small() {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem 1rem 1rem;
+    width: 100vw;
+    }
+    @include medium() {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        width: 100vw;
+    }
+
+    &__logo {
+        @include small() {
+        margin-top: 1.25rem;
+        height: 1.563rem;
+        width: 7.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        @include medium() {
+            padding-left: 2rem;
+        }
+    }
+    &__action {
+        @include small() {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1.25rem;
+        width: 100%;
+        padding-right: 3rem;
+        gap: 1.5rem;
+        }
+        @include medium() {
+            display: flex;
+            align-items: flex-start;
+            padding-right: 4rem;
+            gap: 2rem
+        }
+        &--searchbar {
+            @include small() {
+            margin-top: 1.25rem;
+            text-align: center;
+            width: 100%;
+            height: 3rem;
+            position: relative;
+            font-weight: 600;
+            }
+            @include medium() {
+                width: 15rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 2.5rem;
+                position: relative;
+                font-weight: 600;
+            }
+            &-icon {
+                @include small() {
+                position: absolute;
+                left: 0.5rem;
+                top: 0.8rem;
+                color: $mercury;
+                }
+                @include medium() {
+                    position: absolute;
+                    left: 0.5rem;
+                    top: 0.8rem;
+                    color: $mercury;
+                }
+            }
+            &-input {
+                @include small() {
+                margin: 0 auto;
+                float: left;
+                height: 3rem;
+                width: 80%;
+                border-radius: 4px;
+                border: 2px solid $mercury;
+                padding-left: 2rem;
+                padding-right: 2.5rem;
+                }
+                @include medium() {
+                    border-radius: 4px;
+                    border: 2px solid $mercury;
+                    padding-left: 2rem;
+                    padding-right: 2.5rem;
+                    width: 100%;
+                    height: 3rem;
+                    margin: 0 auto;
+                    float: left;
+                }
+            }
+            &:focus {
+                border-color: $blue ;
+                outline: none;
+            }
+        }
+        &--upload {
+            &-button {
+                @include small() {
+                margin-top: 0.625rem;
+                height: 3.25rem;
+                width: 93vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5rem 1rem;
+                border: none;
+                background-color: $blue;
+                color: $white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 1rem;
+                cursor: pointer;
+                border-radius: 4px;
+                position: relative;
+                font-weight: 600;
+                }
+                @include medium() {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.5rem 1rem;
+                    border: none;
+                    background-color: $blue;
+                    color: $white;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    position: relative;
+                    font-weight: 600;
+                    width: 10rem;
+                    height: 2.5rem;
+                }
+            
+            &-icon {
+                @include small() {
+                position: absolute;
+                left: 0.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1.5rem;
+                height: 1.5rem;
+                }
+                @include medium() {
+                    position: absolute;
+                    left: 0.5rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    }
+                }
+            &:hover {
+                background-color:$dark-blue ;
+            }
+        }
+    }
+        &--avatar {
+            @include small() {
+            margin-left: auto;
+            margin-right: 1rem;
+            margin-top: -9.688rem;
+            margin-bottom: 5.938rem;
+            }
+            @include medium() {
+                position: relative;
+            }
+            &-image {
+                @include small() {
+                display: block;
+                width: 2.5rem;
+                height: 2.5rem;
+                object-fit: cover;
+                border-radius: 50%;
+                }
+                @include medium() {
+                    display: block;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    }
+
+            }
+        }
+    }
+
+}

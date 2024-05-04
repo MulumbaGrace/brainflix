@@ -4,6 +4,7 @@ import searchIcon from '../../assets/images/search.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import uploadIcon from '../../assets/images/upload.svg';
 
+
 function Header() {
     return (
         <header className="header">

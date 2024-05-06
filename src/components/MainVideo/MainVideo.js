@@ -18,10 +18,6 @@ function MainVideo({ video }) {
 
   return (
     <div className="main-video">
-      <video className="hero__video" controls poster={video.image}>
-        <source src={video.video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
       <div className="video__details">
         <h2 className="video__details-title">{video.title}</h2>
         <div className="video__items">
@@ -33,15 +29,16 @@ function MainVideo({ video }) {
         </div>
         <p className="video__description">{video.description}</p>
         <div className="video__comment"> 
-            <div className="video__comment-text"> <h3>{video.comments?.lenght ?? 0} Comments</h3> </div> 
+            <div className="video__comment-text"> <h3>{video.comments?.length ?? 0} Comments</h3> </div> 
         </div>
-        <div className="video__input"> <div className="video__input-avatar"> <img className="video__input-avatar--img" src={avatar} alt="avatar"/></div> </div>
+        <div className="video__input"> <div className="video__input-avatar"> <img className="video__input-avatar--img" src={avatar} alt="avatar"/></div> 
         <div className="video__form">
-            <label className="video__form-lebal" htmlFor='comment'>JOIN THE CONVERSATION</label>
+            <label className="video__form-label" htmlFor='comment'>JOIN THE CONVERSATION</label>
             <div className="video__form-items">
                 <input className="video__form-items--input" type="text" id="comment" name="comment" placeholder="Add a new comment"/>
-                <button classNAme="video__form-items--button" type="submit"> <img classNAme="video__form-items--button-img" src={commentIcon} alt="comment icon"/> COMMENT </button>
+                <button className="video__form-items--button" type="submit"> <img className="video__form-items--button-img" src={commentIcon} alt="comment icon"/> COMMENT </button>
             </div>
+        </div>
         </div>
         <div className="video__comments-list">
             <ul className="video__comments-list--items">

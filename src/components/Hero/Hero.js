@@ -1,5 +1,5 @@
 import "../Hero/Hero.scss";
 
-const  Hero = ({playVideo}) => 
-    <video controls poster={playVideo} className="hero__video" />
+const  Hero = ({video}) => 
+    <video controls poster={video} className="hero__video" />
 export default Hero;

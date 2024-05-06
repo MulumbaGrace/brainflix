@@ -2,3 +2,12 @@
 @import './styles/partials/colors';
 @import './styles/partials/fonts';
 @import './styles/partials/resets';
+
+
+@include large {
+    .container {
+        display: flex;
+      
+    }
+}
+  

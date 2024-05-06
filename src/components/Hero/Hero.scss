@@ -1,0 +1,22 @@
+@import '../../styles/partials/breakpoint';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/colors';
+@import '../../styles/partials/resets';
+@import '../../styles/partials/variables';
+
+.hero__video {
+    position: relative;
+    width: 100%;
+    @include large() {
+    position: relative;
+    height: 43.813rem;
+    overflow: hidden;
+    background-color: $dark-black;
+    }
+    @include medium {
+        padding-right: 2.8rem;
+        overflow: hidden;
+        background-color: $dark-black;
+        padding-left: 2.8rem;
+    }
+}

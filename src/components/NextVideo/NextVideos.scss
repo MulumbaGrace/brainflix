@@ -1,0 +1,106 @@
+@import '../../styles/partials/breakpoint';
+@import '../../styles/partials/colors';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/resets';
+@import '../../styles/partials/variables';
+
+.videos {
+    margin-top: 1rem;
+    padding: 0 1rem;
+    flex-basis: 100%;
+    @include large {
+        top: 98%;
+        position: relative;
+        width: 100%;
+        left: 0.5%;
+        padding-left: 1.5rem;
+    }
+
+    @include medium {
+        padding-right: 5.5rem;
+        padding-left: 1.5rem;
+    }
+    &__title {
+        color: $silver;
+        font-family: $avenir-demi, Helvetica, sans-serif;
+        font-weight: 700;
+        padding-top: 2.25rem;
+        padding-bottom: 1rem;
+        text-align: left;
+    }
+
+    &__list {
+        width: 59%;
+    
+        @include large {
+            width: 22rem;
+        }
+    
+        @include medium {
+            width: 22rem;
+        }
+    }
+}
+
+
+.videos__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.videos__item img {
+    flex-basis: 49%;
+    width: 9rem;
+    margin-right: 10px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.videos__info {
+    flex-basis: 49%;
+    .videos__info-title {
+        flex-basis: 49%;
+        font-size: 0.875rem;
+        width: 12rem;
+        height: 3.75rem;
+        text-align: left;
+    
+        @include medium {
+            width: 17rem;
+        }
+    
+        @include small {
+            width: 13rem;
+        }
+    }
+    .videos__info-channel {
+        margin: 5px 0 0;
+        font-size: 0.8rem;
+        color: #666;
+        text-align: left;
+        font-family: $avenir-demi, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 0.875rem;
+        color: $dark-black;
+    
+        @include small {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+
+@include large() {
+    .videos::before {
+        content: "";
+        position: absolute;
+        top: -1.5%;
+        bottom: 0;
+        left: -2%;
+        width: 1px;
+        background-color: $mercury;
+        margin-left: -5px;
+    }
+}
+

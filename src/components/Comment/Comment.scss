@@ -1,0 +1,65 @@
+@import '../../styles/partials/breakpoint';
+@import '../../styles/partials/colors';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/resets';
+@import '../../styles/partials/variables';
+
+
+.video__comment {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    width: 100%;
+
+    @include medium {
+        padding-right: 5.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .comment__header {
+        display: flex;
+        margin-bottom: 0.5rem;
+        align-items: center;
+
+        .comment__avatar {
+            position: relative;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            overflow: visible;
+            margin-right: 1rem;
+        }
+    }
+
+    .comment__info {
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        justify-content: space-between;
+
+        .video__comment-author {
+            font-size: 0.875rem;
+            font-family: $avenir-bold, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+
+        .comment__date {
+            color: $silver;
+            font-family: $avenir-regular, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+    }
+
+    .video__comment-text {
+        border-bottom: 1px solid #E1E1E1;
+        padding-bottom: 1rem;
+        margin-top: 0.5rem;
+        padding-left: 3.438rem;
+        text-align: left;
+        font-family: $avenir-regular, Helvetica, sans-serif;
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+}

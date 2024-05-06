@@ -22,7 +22,7 @@ function MainVideo({ video }) {
         <source src={video.video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div classNane="video__details">
+      <div className="video__details">
         <h2 className="video__details-title">{video.title}</h2>
         <div className="video__items">
             <p className="video__items-channel">By {video.channel} <span className="video__items-date"> {timeFormat(video.timestamp)} </span></p>

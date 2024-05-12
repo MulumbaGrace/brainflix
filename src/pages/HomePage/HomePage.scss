@@ -1,0 +1,21 @@
+@import '../../styles/partials/breakpoint';
+@import '../../styles/partials/colors';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/variables';
+@import '../../styles/partials/resets';
+
+@include large {
+    .home__main {
+        display: flex;
+    }   
+}
+
+.home__video {
+    @include large {
+        position: relative;
+        width: 100%;
+        height: 43.75rem;
+        overflow: hidden;
+        background-color: #000000;
+    }
+}

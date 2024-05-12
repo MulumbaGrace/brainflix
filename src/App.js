@@ -1,35 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
-import Header from './components/Header/Header';
-import NextVideos from './components/NextVideo/NextVideos';
-import MainVideo from './components/MainVideo/MainVideo';
-import videoData from './data/video-details.json';
-import Hero from './components/Hero/Hero';
+import HomePage from './pages/HomePage/HomePage';
+import UploadPage from './pages/UploadPage/UploadPage';
 
-function App() {
-  const [currentVideo, setCurrentVideo] = useState(videoData[0]);
-
-  const timeFormat = (timestamp) => {
-    const date = new Date(timestamp);
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
-  };
-
-  const handleVideoSelect = (video) => {
-    setCurrentVideo(video);
-  };
-
+  function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero  video={currentVideo.image}/>
-      <div className="container">
-        <MainVideo video={currentVideo} timeFormat={timeFormat} />
-        <NextVideos videos={videoData.filter(video => video.id !== currentVideo.id)} onVideoSelect={handleVideoSelect} />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/videos/:id" element={<HomePage />} />
+      </Routes>
+    </Router>
   );
 }
 

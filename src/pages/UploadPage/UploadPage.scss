@@ -1,0 +1,225 @@
+@import '../../styles/partials/breakpoint';
+@import '../../styles/partials/colors';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/variables';
+@import '../../styles/partials/resets';
+
+.main-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @include large {
+    display: flex;
+    align-items: baseline;
+    border-bottom: 2px solid #E1E1E1;
+    margin-bottom: 1.5rem;
+    border-top: 2px solid #E1E1E1;
+    margin-top: 1.5rem;
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    }
+    @include medium {
+        border-bottom: 2px solid #E1E1E1;
+        margin-bottom: 1.5rem;
+        border-top: 2px solid #E1E1E1;
+        margin-top: 1.5rem;
+        margin-left: 5.5rem;
+        margin-right: 5.5rem;
+    }
+}
+
+.main__title {
+    border-top: 2px solid #E1E1E1;
+    padding-top: 1rem;
+    font-family: $avenir-bold, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    width: 100vw;
+    @include large {
+        font-size: 2.063rem;
+        padding-left: 5.5rem;
+    }
+    @include medium {
+        padding-left: 5.5rem;
+        font-size: 2.063rem;
+    }
+}
+
+.main__image {
+    width: 100%;
+    @include large {
+    width: 35vw;
+    }
+    @include medium {
+        width: 50vw;
+    }
+}
+
+.main__text {
+    padding-top: 1rem;
+    display: block;
+    font-weight: 600;
+    color: #AFAFAF;
+    font-family: $avenir-demi, "Helvetica", sans-serif;
+    padding-bottom: 0.625rem;
+}
+.form__upload {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    width: 100%;
+    @include large {
+        width: 100%;
+    }
+    @include medium {
+        width: 100%;
+    }
+}
+
+
+.form__label {
+    display: block;
+    font-weight: 600;
+    color: #AFAFAF;
+    font-family: $avenir-demi, "Helvetica", sans-serif;
+    padding-bottom: 0.625rem;
+    padding-top: 0.625rem;
+}
+
+.form__input {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.form__input-title {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    font-family: $avenir-regular, Helvetica, sans-serif;
+    background-color: #FAFAFA;
+    color: $black;
+    @include large {
+        width: 100%;
+    }
+    @include medium {
+        width: 100%;
+    }
+}
+
+.form__description {
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.form__textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #FAFAFA;
+    font-family: $avenir-regular, "Helvetica", sans-serif;
+    padding-left: 1rem;
+    color: $black;
+    @include large {
+        width: 100%;
+    }
+    @include medium {
+        width: 100%;
+    }
+}
+
+.form__cancel-button {
+    border: none;
+}
+
+.form__publish {
+    padding: 0 1.5rem;
+    @include medium {
+        padding-left: 5.5rem;
+        padding-right: 3.5rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.form__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #0095FF;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    font-family: $avenir-regular, Helvetica, sans-serif;
+    font-weight: 600;
+    height: 2.5rem;
+    width: 100%;
+    @include large {
+        width: 12vw;
+    }
+    @include medium {
+        width: 25%;
+        margin-right: 2rem;
+    }
+}
+
+.form__button:hover {
+    background-color: $dark-blue;
+}
+
+.form__publish-icon {
+    right: 100%;
+    position: sticky;
+}
+
+.form__cancel-button {
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-family: $avenir-demi, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: $blue;
+}
+
+.form__cancel-button:hover {
+    background-color: white;
+}
+
+.form__cancel {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    @include large {
+        margin-top: -3.6rem;
+        padding-left: 44rem;
+    }
+    @include medium {
+        margin-top: -3.6rem;
+        padding-left: 9rem;
+    }
+}

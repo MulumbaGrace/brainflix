@@ -115,6 +115,10 @@
             }
         }
         &--upload {
+            &-link {
+                text-decoration: none;
+                color: $white;
+            }
             &-button {
                 @include small() {
                 margin-top: 0.625rem;

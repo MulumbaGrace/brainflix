@@ -3,12 +3,41 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import thumbnail from '../../assets/images/Upload-video-preview.jpg'
 import publishIcon from '../../assets/images/publish.svg';
+import { useNavigate } from 'react-router-dom';
+import { API_URL, API_KEY } from '../../utilis';
+import axios from 'axios';
 
 function UploadPage() {
     const [formData, setFormData] = useState({
         title: '',
         description: ''
     });
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!formData.title || !formData.description) {
+            alert('Please fill out all fields');
+            return;
+        }
+        alert('Uploaded');
+        const uploadVideo = async () => {
+            try {
+                const response = await axios.post(`${API_URL}/videos?api_key=${API_KEY}`, {
+                    title: e.target.title.value,
+                    description: e.target.description.value,
+                    image: 'http://localhost:8080/video-upload.jpg'
+                });
+                console.log(response);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        uploadVideo();
+        navigate("/");
+    };
+        
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -44,7 +73,7 @@ function UploadPage() {
             </div>
             <div>
                 <div className="form__publish">
-                    <button className="form__button" type="submit"><img className="form__publish-icon" src={publishIcon} alt="publish icon"/>PUBLISH</button>
+                    <button className="form__button" type="submit" onClick={handleSubmit}><img className="form__publish-icon" src={publishIcon} alt="publish icon"/>PUBLISH</button>
                 </div>
                 <div className="form__cancel">
                     <button type="button" className="form__cancel-button">CANCEL</button>
